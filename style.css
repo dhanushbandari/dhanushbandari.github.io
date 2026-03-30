@@ -228,10 +228,17 @@ img {
 
 /* MOBILE MENU */
 .mobile-menu {
-    display: none;
-    flex-direction: column;
+    position: fixed;
+    top:0;
+    left: -250px; /* hidden outside screen */
+    width: 250px;
+    height: 100vh;
     background-color: var(--bg-sidebar);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: 0.3s ease;
+    z-index: 1000;
 }
 
 .mobile-menu a {
@@ -247,7 +254,17 @@ img {
 
 /* ACTIVE MENU */
 .mobile-menu.active {
-    display: flex;
+    left: 0; /* slide in */
+}
+
+.mobile-menu::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
 }
 
 /* SHOW ONLY ON MOBILE */
