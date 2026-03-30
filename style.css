@@ -15,7 +15,7 @@
 /* ========================= */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif; /* Added Inter for that modern look */
     background-color: var(--bg-body);
     color: var(--text-main);
 }
@@ -26,122 +26,88 @@ img {
 }
 
 /* ========================= */
-/* 3. SIDEBARS (DESKTOP) */
+/* 3. DESKTOP SIDEBAR (Single Left Sidebar) */
 /* ========================= */
-.sidebar-left {
+.sidebar {
     position: fixed;
     left: 0;
     top: 0;
-    width: 250px;
+    width: 260px; /* Slightly wider to match reference */
     height: 100vh;
     background-color: var(--bg-sidebar);
     border-right: 1px solid var(--border-color);
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
+    padding: 40px 20px 20px 20px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
 }
 
-.sidebar-right {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 250px;
-    height: 100vh;
-    background-color: var(--bg-sidebar);
-    border-left: 1px solid var(--border-color);
+/* Profile Image inside Sidebar */
+.sidebar img.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes it a circle */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid var(--text-muted);
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+.sidebar h2.name {
+    margin: 0 0 5px 0;
+    color: var(--text-main);
+    font-size: 1.4rem;
+}
+
+.sidebar p.tagline {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* Navigation inside Sidebar */
+.sidebar nav {
+    width: 100%;
+}
+
+.sidebar nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.sidebar nav a:hover, .sidebar nav a.active {
+    color: var(--bg-body);
+    background-color: var(--accent); /* Highlights the active/hovered link */
 }
 
 /* ========================= */
 /* 4. MAIN CONTENT */
 /* ========================= */
 .main-content {
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 260px; /* Pushes content right of the sidebar */
+    margin-right: 0;    /* Removed the right margin */
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .main-content h1 {
-    margin: 0;
+    margin: 0 0 20px 0;
     font-size: 2rem;
-    letter-spacing: 2px;
-    text-shadow: whitesmoke 1px 1px 2px;
+    letter-spacing: 1px;
 }
 
 /* ========================= */
-/* 5. SEARCH */
-/* ========================= */
-.sidebar-left input {
-    padding: 12px 20px;
-    border-radius: 25px;
-    border: none;
-    width: 200px;
-    background-color: #2d2d2d;
-    color: white;
-}
-
-.recent-view {
-    color: var(--text-muted);
-    margin-top: 20px;
-}
-
-/* ========================= */
-/* 6. PROFILE IMAGE */
-/* ========================= */
-.sidebar-right img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* ========================= */
-/* 7. NAVIGATION */
-/* ========================= */
-.sidebar-right nav h2 {
-    color: var(--accent);
-    margin-bottom: 15px;
-}
-
-.sidebar-right nav a {
-    color: var(--text-muted);
-    text-decoration: none;
-    margin: 10px 0;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar-right nav a:hover {
-    color: var(--accent);
-}
-
-/* ========================= */
-/* 8. ABOUT + PROJECT */
-/* ========================= */
-.container,
-.project-container {
-    margin-left: 250px;
-    margin-right: 250px;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-.container p {
-    line-height: 1.7;
-}
-
-/* ========================= */
-/* 9. MOBILE NAVBAR */
+/* 5. MOBILE NAVBAR (Top Header) */
 /* ========================= */
 .mobile-nav {
     display: none;
@@ -154,6 +120,7 @@ img {
     width: 100%;
     top: 0;
     z-index: 1001;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -167,7 +134,7 @@ img {
 }
 
 /* ========================= */
-/* 10. PREMIUM MOBILE SIDEBAR */
+/* 6. PREMIUM MOBILE SIDEBAR */
 /* ========================= */
 .mobile-menu {
     position: fixed;
@@ -192,6 +159,7 @@ img {
 .menu-profile {
     text-align: center;
     margin-bottom: 30px;
+    margin-top: 60px; /* Push down below mobile nav */
 }
 
 .menu-profile img {
@@ -200,16 +168,6 @@ img {
     border-radius: 50%;
     border: 2px solid #444;
     margin-bottom: 10px;
-}
-
-.menu-profile h2 {
-    margin: 5px 0;
-    font-size: 1.2rem;
-}
-
-.menu-profile p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
 }
 
 /* MENU LINKS */
@@ -243,36 +201,77 @@ img {
 }
 
 /* ========================= */
-/* 11. RESPONSIVE */
+/* 7. RESPONSIVE QUERIES */
 /* ========================= */
 @media screen and (max-width: 900px) {
-
     .mobile-nav {
         display: flex;
     }
 
-    /* Hide desktop sidebars */
-    .sidebar-left,
-    .sidebar-right {
+    /* Hide desktop sidebar */
+    .sidebar {
         display: none;
     }
 
-    /* Adjust content */
-    .main-content,
-    .container,
-    .project-container {
-        margin: 0;
-        padding: 80px 20px 20px;
+    /* Adjust main content to take full width */
+    .main-content {
+        margin-left: 0;
+        padding: 80px 20px 20px 20px; /* Top padding to clear the mobile nav */
     }
+}
 
-    .main-content h1,
-    .container h1,
-    .project-container h1 {
-        text-align: center;
-        font-size: 1.5rem;
-    }
+/* ========================= */
+/* 8. PROJECT CARDS & GRID */
+/* ========================= */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
 
-    .sidebar-left input {
-        width: 80%;
-    }
+.card {
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: #555;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h2 {
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    color: var(--text-main);
+}
+
+.card-info .status {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card-info .description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
 }

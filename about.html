@@ -4,74 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Dhanush</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- 🔥 MOBILE NAVBAR -->
     <div class="mobile-nav">
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
         <div class="logo">Dhanush</div>
-        <img src="IMG_5588.jpg" alt="Profile" class="mobile-profile-img">
     </div>
 
-    <!-- 🔥 MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
-
         <div class="menu-profile">
-            <img src="IMG_5588.jpg" alt="Profile">
+            <img src="IMG_5588.jpg" alt="Dhanush">
             <h2>Dhanush</h2>
             <p>Dreams come true?</p>
         </div>
-
-        <a href="index.html">🏠 Home</a>
-        <a href="projects.html">📂 Projects</a>
-        <a href="about.html">👤 About</a>
-
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+        <a href="about.html"><i class="fas fa-user"></i> About</a>
     </div>
 
-    <!-- 📌 LEFT SIDEBAR -->
-    <div class="sidebar-left">
-        <div class="search-wrapper">
-            <input type="text" placeholder="Search...">
-        </div>
-        <p class="recent-view">Recent view</p>
-    </div>
+    <div class="sidebar">
+        <img src="IMG_5588.jpg" alt="Dhanush" class="profile-pic">
+        <h2 class="name">Dhanush</h2>
+        <p class="tagline">Dreams come true?</p>
 
-    <!-- 📌 RIGHT SIDEBAR -->
-    <div class="sidebar-right">
         <nav>
-            <h2>Profile</h2>
-
-            <div class="profile-img-container">
-                <img src="IMG_5588.jpg" alt="Profile Picture">
-            </div>
-
-            <a href="index.html">HOME</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="about.html">ABOUT</a>
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+            <a href="projects.html"><i class="fas fa-folder"></i> PROJECTS</a>
+            <a href="about.html" class="active"><i class="fas fa-user"></i> ABOUT</a> 
         </nav>
     </div>
 
-    <!-- 📌 MAIN CONTENT -->
-    <div class="container">
+    <div class="main-content">
         <h1>About</h1>
-        <p>
-            Hey there, it’s Dhanush Bandari..! <br><br>
+        
+        <div class="about-text">
+            <p>Hey there, it’s Dhanush Bandari..!</p>
 
-            Nice to meet you. I don’t know how to describe myself, but still here I’m typing about myself, giving the worst introduction about myself with beautiful words. So, I’m from a small city who has big dreams and vision. By the way, I’m still in the process of figuring out how to make it real. I think I talk too much..! Let’s begin with the proper introduction of mine, so buckle up and bear with me.. <br><br>
+            <p>Nice to meet you. I don’t know how to describe myself, but still here I’m typing about myself, giving the worst introduction about myself with beautiful words. So, I’m from a small city who has big dreams and vision. By the way, I’m still in the process of figuring out how to make it real. I think I talk too much..! Let’s begin with the proper introduction of mine, so buckle up and bear with me..</p>
 
-            I’m an Electronics and Communication Engineering student who has a strong interest in VLSI, Embedded, and IoT automation. And of course, I do know coding sometimes it’s for designing in Verilog, and typing C/C++ for Arduino and ESP32. Sometimes scripting and automating in Python, sometimes using HTML, CSS, and JavaScript. It’s getting fun every day. I always think that I’m a mixture of software and hardware, and I am..! And I love to know how the hardware and software interact with each other. I’m always in the mood of doing something and learning new things. If my brain gets stuck, I just go out and love to explore nature. I mean trekking where I get my inner peace back. Even a small walkout will work, but that’s for the time being. Nature will heal everyone if we enjoy without harming; that’s what I believe. By the way, I love to read fiction novels and self-help books. Those are my source of imagination. <br><br>
+            <p>I’m an Electronics and Communication Engineering student who has a strong interest in VLSI, Embedded, and IoT automation. And of course, I do know coding sometimes it’s for designing in Verilog, and typing C/C++ for Arduino and ESP32. Sometimes scripting and automating in Python, sometimes using HTML, CSS, and JavaScript. It’s getting fun every day. I always think that I’m a mixture of software and hardware, and I am..! And I love to know how the hardware and software interact with each other. I’m always in the mood of doing something and learning new things. If my brain gets stuck, I just go out and love to explore nature. I mean trekking where I get my inner peace back. Even a small walkout will work, but that’s for the time being. Nature will heal everyone if we enjoy without harming; that’s what I believe. By the way, I love to read fiction novels and self-help books. Those are my source of imagination.</p>
 
-            I’m documenting this to express how I learn and apply things, and to tell myself that you did well when the times and things are hard. I always remember a sentence of a poem that I learned in 6th std: <br>
-            “TRY AND TRY AGAIN BOY YOU’LL SUCCEED AT LAST” <br><br>
+            <p>I’m documenting this to express how I learn and apply things, and to tell myself that you did well when the times and things are hard. I always remember a sentence of a poem that I learned in 6th std:</p>
+            
+            <blockquote style="border-left: 4px solid var(--text-muted); padding-left: 15px; margin: 20px 0; font-style: italic; color: var(--text-muted);">
+                “TRY AND TRY AGAIN BOY YOU’LL SUCCEED AT LAST”
+            </blockquote>
 
-            Well, I hope you got to know so much about me. I prefer to describe myself by doing things instead of talking or typing words. I think it’s not meant to talk in this way because I prefer action over talk. Well, if you’re a geek who loves learning new things and exploring yourself in something new, you’re welcome to sneak in.
-        </p>
+            <p>Well, I hope you got to know so much about me. I prefer to describe myself by doing things instead of talking or typing words. I think it’s not meant to talk in this way because I prefer action over talk. Well, if you’re a geek who loves learning new things and exploring yourself in something new, you’re welcome to sneak in.</p>
+        </div>
     </div>
 
-    <!-- 🔥 JAVASCRIPT -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById("mobileMenu");

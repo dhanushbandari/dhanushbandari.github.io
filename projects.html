@@ -3,69 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects - Dhanush</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ✅ MOBILE NAVBAR (ADDED) -->
     <div class="mobile-nav">
-        <div class="logo">Dhanush</div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div class="logo">Dhanush</div>
-
-    <!-- PROFILE IMAGE -->
-    <img src="IMG_5588.jpg" alt="Profile" class="mobile-profile-img">
-    </div>
-    </div>
-
-    <div class="sidebar-left">
-        <div class="search-wrapper">
-            <input type="text" placeholder="Search...">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
         </div>
-        <p class="recent-view">Recent view</p>
-    </div>
-
-    <div class="sidebar-right">
-        <nav>
-            <h2>Profile</h2>
-            <div class="profile-img-container">
-                <img src="IMG_5588.jpg" alt="Profile Picture">
-            </div>
-            <a href="index.html">HOME</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="about.html">ABOUT</a>
-        </nav>
+        <div class="logo">Dhanush</div>
     </div>
 
     <div class="mobile-menu" id="mobileMenu">
-
-    <!-- PROFILE -->
-    <div class="menu-profile">
-        <img src="IMG_5588.jpg" alt="Profile">
-        <h2>Dhanush</h2>
-        <p>Dreams come true?</p>
+        <div class="menu-profile">
+            <img src="IMG_5588.jpg" alt="Dhanush">
+            <h2>Dhanush</h2>
+            <p>Dreams come true?</p>
+        </div>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+        <a href="about.html"><i class="fas fa-user"></i> About</a>
     </div>
 
-    <!-- MENU -->
-    <a href="index.html">🏠 Home</a>
-    <a href="projects.html">📂 Projects</a>
-    <a href="about.html">👤 About</a>
+    <div class="sidebar">
+        <img src="IMG_5588.jpg" alt="Dhanush" class="profile-pic">
+        <h2 class="name">Dhanush</h2>
+        <p class="tagline">Dreams come true?</p>
 
-</div>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+            <a href="projects.html" class="active"><i class="fas fa-folder"></i> PROJECTS</a>
+            <a href="about.html"><i class="fas fa-user"></i> ABOUT</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h1>My Projects</h1>
+        <p style="color: var(--text-muted); margin-bottom: 30px;">Here is a collection of my hardware and software work.</p>
+
+        <div class="project-grid">
+
+            <div class="card">
+                <img src="https://via.placeholder.com/400x200/1e1e1e/888888?text=Supermarket+E-Commerce" alt="E-commerce Project">
+                <div class="card-info">
+                    <h2>Supermarket E-commerce</h2>
+                    <p class="status">HTML • CSS • SQL</p>
+                    <p class="description">A full-stack e-commerce platform designed for a local supermarket, featuring secure data storage and a responsive modern UI.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/400x200/1e1e1e/888888?text=ESP32+IoT+Board" alt="ESP32 Project">
+                <div class="card-info">
+                    <h2>ESP32 Smart Automation</h2>
+                    <p class="status">C/C++ • Hardware • IoT</p>
+                    <p class="description">An embedded systems project utilizing the ESP32 microcontroller to automate tasks, bridging the gap between hardware sensors and software logic.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/400x200/1e1e1e/888888?text=100+Days+of+Python" alt="Python Challenge">
+                <div class="card-info">
+                    <h2>100 Days of Code: Python</h2>
+                    <p class="status">Python • OOP • Scripts</p>
+                    <p class="description">A daily programming challenge focused on mastering Python, including Object-Oriented Programming (OOP) concepts and daily script building.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <script>
-    function toggleMenu() {
-        const menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("active");
-    }
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
     </script>
-
-    <div class="project-container">
-        <h1>My Project</h1>
-        <p>Here are my work..</p>
-    </div>  
 
 </body>
 </html>
