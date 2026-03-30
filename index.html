@@ -31,6 +31,22 @@
             <a href="about.html">ABOUT</a>
         </nav>
     </div>
+    <div class="mobile-nav">
+    <div class="logo">Dhanush</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">HOME</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="about.html">ABOUT</a>
+</div>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+}
+</script>
     <a href="about.html" class="about-link">Go to About Page</a>
     <a href="projects.html" class="projects-link">Go to Projects Page</a>
 </body>
