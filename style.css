@@ -1,0 +1,238 @@
+/* 1. COLOR VARIABLES (Dark Mode Setup) */
+:root {
+    --bg-body: #121212;       /* Very dark grey/black for center */
+    --bg-sidebar: #1f1f1f;    /* Slightly lighter grey for sidebars */
+    --text-main: #e0e0e0;     /* Off-white text */
+    --text-muted: #b0b0b0;    /* Grey text for secondary items */
+    --accent: #ffffff;        /* Bright white for highlights */
+    --border-color: #333333;  /* Dark borders */
+}
+
+/* 2. GLOBAL RESETS */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+}
+
+/* 3. LAYOUT GRID */
+/* This is the magic part that makes the 3 columns work */
+
+/* LEFT SIDEBAR */
+.sidebar-left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px; /* Moves search bar down slightly */
+}
+
+/* RIGHT SIDEBAR */
+.sidebar-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--bg-sidebar);
+    border-left: 1px solid var(--border-color);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* MIDDLE CONTENT */
+.main-content {
+    /* These margins push the content inward so it's not hidden by sidebars */
+    margin-left: 300px;  
+    margin-right: 300px;
+    height: 100vh;
+    
+    /* This aligns the text to the top-left */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns to top */
+    padding: 10px; /* Matches the top padding of sidebar-left roughly */
+}
+
+/* 4. SPECIFIC ELEMENT STYLING */
+
+/* Heading Styling */
+.main-content h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--text-main);
+    text-align: left; /* Aligns text to left (near search bar) */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: whitesmoke 1px 1px 2px;
+}
+
+/* Search Bar Styling */
+.sidebar-left input {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    width: 200px;
+    background-color: #2d2d2d;
+    color: white;
+    outline: none;
+}
+.recent-view {
+    color: var(--text-muted);
+    margin-top: 20px;
+}
+
+/* Profile Image */
+.sidebar-right img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+    transition: transform 0.3s;
+}
+.sidebar-right img:hover {
+    transform: scale(1.05);
+    border-color: var(--accent);
+}
+
+/* Navigation Links */
+.sidebar-right nav h2 {
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-right nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 16px;
+    margin: 15px 0;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+.sidebar-right nav a:hover {
+    color: var(--accent);
+    transform: translateX(5px); /* Slight movement effect */
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Mobile & Tablet)
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+    
+    /* 1. Unstick the Sidebars */
+    .sidebar-left, 
+    .sidebar-right {
+        position: relative; /* Stop floating fixed */
+        width: 100%;        /* Take full width */
+        height: auto;       /* Height adjusts to content */
+        border: none;       /* Remove side borders */
+        border-bottom: 1px solid #333; /* Add separator line instead */
+        padding: 20px 0;    /* Reduce padding */
+    }
+
+    /* 2. Reset the Main Content */
+    .main-content {
+        margin-left: 0;     /* Remove the big empty left space */
+        margin-right: 0;    /* Remove the big empty right space */
+        width: 100%;        /* Full width */
+        height: auto;       /* Let it scroll naturally */
+        padding: 20px;      /* Smaller padding for mobile */
+    }
+
+    /* 3. Reorder Items (Optional but recommended) */
+    /* This forces the Navigation (Right Sidebar) to appear at the BOTTOM or TOP */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Example: Put Search (Left) first, then Content, then Profile (Right) last */
+    .sidebar-left { order: 1; }
+    .main-content { order: 2; }
+    .sidebar-right { order: 3; }
+    
+    /* Adjust text sizes for smaller screens */
+    .main-content h1 {
+        font-size: 2rem; /* Smaller heading */
+        text-align: center;
+    }
+    
+    .sidebar-left input {
+        width: 80%; /* Search bar stretches on mobile */
+    }
+}
+/* ABOUT PAGE STYLE */
+/* MIDDLE CONTENT */
+.container {
+    /* These margins push the content inward so it's not hidden by sidebars */
+    margin-left: 300px;  
+    margin-right: 300px;
+    height: 100vh;
+    /* This aligns the text to the top-left */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns to top */
+    padding: 10px; /* Matches the top padding of sidebar-left roughly */
+}
+.container p {
+    color: var(--text-main);
+    line-height: 1.8;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-display: var(--accent);
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* Heading Styling */
+.container h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--text-main);
+    text-align: left; /* Aligns text to left (near search bar) */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: whitesmoke 1px 1px 2px;
+}
+/* PROJECT PAGE STYLE */
+/* MIDDLE CONTENT */
+.project-container {
+    /* These margins push the content inward so it's not hidden by sidebars */
+    margin-left: 300px;  
+    margin-right: 300px;
+    height: 100vh;
+    
+    /* This aligns the text to the top-left */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns to top */
+    padding: 10px; /* Matches the top padding of sidebar-left roughly */
+}
+
+/* Heading Styling */
+.project-container h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--text-main);
+    text-align: left; /* Aligns text to left (near search bar) */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: whitesmoke 1px 1px 2px;
+}
