@@ -21,7 +21,7 @@ img {
     height: auto;
 }
 
-/* 3. SIDEBARS */
+/* SIDEBARS */
 .sidebar-left {
     position: fixed;
     left: 0;
@@ -30,7 +30,6 @@ img {
     height: 100vh;
     background-color: var(--bg-sidebar);
     border-right: 1px solid var(--border-color);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,26 +44,22 @@ img {
     height: 100vh;
     background-color: var(--bg-sidebar);
     border-left: 1px solid var(--border-color);
-
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
 }
 
-/* 4. MAIN CONTENT */
+/* MAIN CONTENT */
 .main-content {
     margin-left: 250px;
     margin-right: 250px;
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     padding: 20px;
 }
 
-/* HEADINGS */
 .main-content h1 {
     margin: 0;
     font-size: 2rem;
@@ -89,20 +84,13 @@ img {
 
 /* PROFILE IMAGE */
 .sidebar-right img {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--border-color);
-    transition: 0.3s;
 }
 
-.sidebar-right img:hover {
-    transform: scale(1.05);
-    border-color: var(--accent);
-}
-
-/* NAVIGATION */
+/* NAV */
 .sidebar-right nav h2 {
     color: var(--accent);
     margin-bottom: 15px;
@@ -113,100 +101,29 @@ img {
     text-decoration: none;
     margin: 10px 0;
     display: block;
-    transition: 0.3s;
 }
 
 .sidebar-right nav a:hover {
     color: var(--accent);
-    transform: translateX(5px);
 }
 
-/* ========================= */
-/* ABOUT & PROJECT PAGES */
-/* ========================= */
-
+/* ABOUT + PROJECT */
 .container,
 .project-container {
     margin-left: 250px;
     margin-right: 250px;
     min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
     padding: 20px;
-}
-
-.container h1,
-.project-container h1 {
-    font-size: 2rem;
-    letter-spacing: 2px;
 }
 
 .container p {
     line-height: 1.7;
-    font-size: 1.1rem;
 }
 
 /* ========================= */
-/* RESPONSIVE DESIGN */
+/* MOBILE NAV */
 /* ========================= */
 
-@media screen and (max-width: 900px) {
-
-    /* Remove fixed layout */
-    .sidebar-left,
-    .sidebar-right {
-        position: relative;
-        width: 100%;
-        height: auto;
-        border: none;
-        border-bottom: 1px solid var(--border-color);
-        padding: 20px 0;
-    }
-
-    /* Stack layout */
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Reset content */
-    .main-content,
-    .container,
-    .project-container {
-        margin: 0;
-        width: 100%;
-        padding: 20px;
-    }
-
-    /* Order layout */
-    .sidebar-left { order: 1; }
-    .main-content { order: 2; }
-    .container { order: 2; }
-    .project-container { order: 2; }
-    .sidebar-right { order: 3; }
-
-    /* Typography */
-    .main-content h1,
-    .container h1,
-    .project-container h1 {
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
-    /* Search bar */
-    .sidebar-left input {
-        width: 80%;
-    }
-
-    /* Nav links */
-    .sidebar-right nav a {
-        font-size: 14px;
-    }
-}
-
-
-/* MOBILE NAVBAR */
 .mobile-nav {
     display: none;
     justify-content: space-between;
@@ -214,10 +131,13 @@ img {
     background-color: var(--bg-sidebar);
     padding: 15px 20px;
     border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1001;
 }
 
 .logo {
-    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -229,62 +149,61 @@ img {
 /* MOBILE MENU */
 .mobile-menu {
     position: fixed;
-    top:0;
-    left: -250px; /* hidden outside screen */
+    top: 0;
+    left: -250px;
     width: 250px;
     height: 100vh;
     background-color: var(--bg-sidebar);
     display: flex;
     flex-direction: column;
     padding-top: 60px;
-    transition: 0.3s ease;
+    transition: 0.3s;
     z-index: 1000;
 }
 
 .mobile-menu a {
     padding: 15px;
-    text-decoration: none;
     color: var(--text-main);
-    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
 }
 
-.mobile-menu a:hover {
-    background-color: #2a2a2a;
-}
-
-/* ACTIVE MENU */
 .mobile-menu.active {
-    left: 0; /* slide in */
+    left: 0;
 }
 
-.mobile-menu::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 250px;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.5);
+/* PROFILE IN NAV */
+.mobile-profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
 
-/* SHOW ONLY ON MOBILE */
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
 @media screen and (max-width: 900px) {
 
     .mobile-nav {
         display: flex;
     }
 
-    /* Hide sidebars on mobile */
+    /* Hide sidebars */
     .sidebar-left,
     .sidebar-right {
         display: none;
     }
-}
 
-/* MOBILE NAV PROFILE IMAGE */
-.mobile-profile-img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    object-fit: cover;
+    /* Fix content */
+    .main-content,
+    .container,
+    .project-container {
+        margin: 0;
+        padding: 80px 20px 20px; /* space for navbar */
+    }
+
+    .main-content h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
 }
