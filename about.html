@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
+    <title>About - Dhanush</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- 🔥 MOBILE NAVBAR -->
+    <div class="mobile-nav">
+        <div class="logo">Dhanush</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">HOME</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="about.html">ABOUT</a>
+    </div>
+
+    <!-- 📌 LEFT SIDEBAR -->
     <div class="sidebar-left">
         <div class="search-wrapper">
             <input type="text" placeholder="Search...">
         </div>
         <p class="recent-view">Recent view</p>
     </div>
+
+    <!-- 📌 RIGHT SIDEBAR -->
     <div class="sidebar-right">
         <nav>
             <h2>Profile</h2>
@@ -24,18 +41,9 @@
             <a href="about.html">ABOUT</a>
         </nav>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">HOME</a>
-    <a href="projects.html">PROJECTS</a>
-    <a href="about.html">ABOUT</a>
-</div>
-<script>
-function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("active");
-}
-</script>
-    <div class="container">
+
+    <!-- 📌 MAIN CONTENT -->
+        <div class="container">
         <h1>About</h1>
         <p> Hey there, it’s Dhanush Bandari..!
     <br><br>
@@ -48,6 +56,15 @@ I’m documenting this to express how I learn and apply things, and to tell myse
 “TRY AND TRY AGAIN BOY YOU’LL SUCCEED AT LAST”
 <br><br>
 Well, I hope you got to know so much about me. I prefer to describe myself by doing things instead of talking or typing words. I think it’s not meant to talk in this way because I prefer action over talk. Well, if you’re a geek who loves learning new things and exploring yourself in something new, you’re welcome to sneak in.</p>
-    </div> 
+    </div>
+
+    <!-- 🔥 JAVASCRIPT -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
 </body>
 </html>

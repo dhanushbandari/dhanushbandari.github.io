@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>Home - Dhanush</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- 🔥 MOBILE NAVBAR -->
+    <div class="mobile-nav">
+        <div class="logo">Dhanush</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">HOME</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="about.html">ABOUT</a>
+    </div>
+
+    <!-- 📌 LEFT SIDEBAR -->
     <div class="sidebar-left">
         <div class="search-wrapper">
             <input type="text" placeholder="Search...">
@@ -15,39 +29,34 @@
         <p class="recent-view">Recent view</p>
     </div>
 
+    <!-- 📌 MAIN CONTENT -->
     <div class="main-content">
-        <h1>Home</h1>
-        <p>Welcome to my home page!</p>
+        <h1>Dhanush Portfolio</h1>
+        <p>Welcome to my personal website 👋</p>
+        <p>I build responsive and modern web applications.</p>
     </div>
 
+    <!-- 📌 RIGHT SIDEBAR -->
     <div class="sidebar-right">
         <nav>
             <h2>Profile</h2>
             <div class="profile-img-container">
                 <img src="IMG_5588.jpg" alt="Profile Picture">
             </div>
+
             <a href="index.html">HOME</a>
             <a href="projects.html">PROJECTS</a>
             <a href="about.html">ABOUT</a>
         </nav>
     </div>
-    <div class="mobile-nav">
-    <div class="logo">Dhanush</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</div>
 
-<div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">HOME</a>
-    <a href="projects.html">PROJECTS</a>
-    <a href="about.html">ABOUT</a>
-</div>
-<script>
-function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("active");
-}
-</script>
-    <a href="about.html" class="about-link">Go to About Page</a>
-    <a href="projects.html" class="projects-link">Go to Projects Page</a>
+    <!-- 🔥 JAVASCRIPT -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
 </body>
 </html>
