@@ -1,14 +1,14 @@
-/* 1. COLOR VARIABLES (Dark Mode Setup) */
+/* 1. COLOR VARIABLES */
 :root {
-    --bg-body: #121212;       /* Very dark grey/black for center */
-    --bg-sidebar: #1f1f1f;    /* Slightly lighter grey for sidebars */
-    --text-main: #e0e0e0;     /* Off-white text */
-    --text-muted: #b0b0b0;    /* Grey text for secondary items */
-    --accent: #ffffff;        /* Bright white for highlights */
-    --border-color: #333333;  /* Dark borders */
+    --bg-body: #121212;
+    --bg-sidebar: #1f1f1f;
+    --text-main: #e0e0e0;
+    --text-muted: #b0b0b0;
+    --accent: #ffffff;
+    --border-color: #333333;
 }
 
-/* 2. GLOBAL RESETS */
+/* 2. GLOBAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -16,69 +16,63 @@ body {
     color: var(--text-main);
 }
 
-/* 3. LAYOUT GRID */
-/* This is the magic part that makes the 3 columns work */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-/* LEFT SIDEBAR */
+/* 3. SIDEBARS */
 .sidebar-left {
     position: fixed;
     left: 0;
     top: 0;
-    width: 300px;
+    width: 250px;
     height: 100vh;
     background-color: var(--bg-sidebar);
     border-right: 1px solid var(--border-color);
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px; /* Moves search bar down slightly */
+    padding-top: 40px;
 }
 
-/* RIGHT SIDEBAR */
 .sidebar-right {
     position: fixed;
     right: 0;
     top: 0;
-    width: 300px;
+    width: 250px;
     height: 100vh;
     background-color: var(--bg-sidebar);
     border-left: 1px solid var(--border-color);
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
 }
 
-/* MIDDLE CONTENT */
+/* 4. MAIN CONTENT */
 .main-content {
-    /* These margins push the content inward so it's not hidden by sidebars */
-    margin-left: 300px;  
-    margin-right: 300px;
-    height: 100vh;
-    
-    /* This aligns the text to the top-left */
+    margin-left: 250px;
+    margin-right: 250px;
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Aligns to top */
-    padding: 10px; /* Matches the top padding of sidebar-left roughly */
+    justify-content: flex-start;
+    padding: 20px;
 }
 
-/* 4. SPECIFIC ELEMENT STYLING */
-
-/* Heading Styling */
+/* HEADINGS */
 .main-content h1 {
     margin: 0;
     font-size: 2rem;
-    color: var(--text-main);
-    text-align: left; /* Aligns text to left (near search bar) */
-    font-weight: bold;
     letter-spacing: 2px;
     text-shadow: whitesmoke 1px 1px 2px;
 }
 
-/* Search Bar Styling */
+/* SEARCH */
 .sidebar-left input {
     padding: 12px 20px;
     border-radius: 25px;
@@ -86,153 +80,127 @@ body {
     width: 200px;
     background-color: #2d2d2d;
     color: white;
-    outline: none;
 }
+
 .recent-view {
     color: var(--text-muted);
     margin-top: 20px;
 }
 
-/* Profile Image */
+/* PROFILE IMAGE */
 .sidebar-right img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--border-color);
-    transition: transform 0.3s;
+    transition: 0.3s;
 }
+
 .sidebar-right img:hover {
     transform: scale(1.05);
     border-color: var(--accent);
 }
 
-/* Navigation Links */
+/* NAVIGATION */
 .sidebar-right nav h2 {
     color: var(--accent);
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .sidebar-right nav a {
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 16px;
-    margin: 15px 0;
+    margin: 10px 0;
     display: block;
-    text-align: center;
     transition: 0.3s;
-    letter-spacing: 1px;
 }
 
 .sidebar-right nav a:hover {
     color: var(--accent);
-    transform: translateX(5px); /* Slight movement effect */
+    transform: translateX(5px);
 }
 
-/* =========================================
-   RESPONSIVE DESIGN (Mobile & Tablet)
-   ========================================= */
+/* ========================= */
+/* ABOUT & PROJECT PAGES */
+/* ========================= */
+
+.container,
+.project-container {
+    margin-left: 250px;
+    margin-right: 250px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container h1,
+.project-container h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.container p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
 
 @media screen and (max-width: 900px) {
-    
-    /* 1. Unstick the Sidebars */
-    .sidebar-left, 
+
+    /* Remove fixed layout */
+    .sidebar-left,
     .sidebar-right {
-        position: relative; /* Stop floating fixed */
-        width: 100%;        /* Take full width */
-        height: auto;       /* Height adjusts to content */
-        border: none;       /* Remove side borders */
-        border-bottom: 1px solid #333; /* Add separator line instead */
-        padding: 20px 0;    /* Reduce padding */
+        position: relative;
+        width: 100%;
+        height: auto;
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 20px 0;
     }
 
-    /* 2. Reset the Main Content */
-    .main-content {
-        margin-left: 0;     /* Remove the big empty left space */
-        margin-right: 0;    /* Remove the big empty right space */
-        width: 100%;        /* Full width */
-        height: auto;       /* Let it scroll naturally */
-        padding: 20px;      /* Smaller padding for mobile */
-    }
-
-    /* 3. Reorder Items (Optional but recommended) */
-    /* This forces the Navigation (Right Sidebar) to appear at the BOTTOM or TOP */
+    /* Stack layout */
     body {
         display: flex;
         flex-direction: column;
     }
 
-    /* Example: Put Search (Left) first, then Content, then Profile (Right) last */
+    /* Reset content */
+    .main-content,
+    .container,
+    .project-container {
+        margin: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Order layout */
     .sidebar-left { order: 1; }
     .main-content { order: 2; }
+    .container { order: 2; }
+    .project-container { order: 2; }
     .sidebar-right { order: 3; }
-    
-    /* Adjust text sizes for smaller screens */
-    .main-content h1 {
-        font-size: 2rem; /* Smaller heading */
+
+    /* Typography */
+    .main-content h1,
+    .container h1,
+    .project-container h1 {
         text-align: center;
+        font-size: 1.5rem;
     }
-    
+
+    /* Search bar */
     .sidebar-left input {
-        width: 80%; /* Search bar stretches on mobile */
+        width: 80%;
     }
-}
-/* ABOUT PAGE STYLE */
-/* MIDDLE CONTENT */
-.container {
-    /* These margins push the content inward so it's not hidden by sidebars */
-    margin-left: 300px;  
-    margin-right: 300px;
-    height: 100vh;
-    /* This aligns the text to the top-left */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Aligns to top */
-    padding: 10px; /* Matches the top padding of sidebar-left roughly */
-}
-.container p {
-    color: var(--text-main);
-    line-height: 1.8;
-    margin-top: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-display: var(--accent);
-    font-size: 1.1rem;
-    font-weight: 300;
-}
 
-/* Heading Styling */
-.container h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: var(--text-main);
-    text-align: left; /* Aligns text to left (near search bar) */
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: whitesmoke 1px 1px 2px;
-}
-/* PROJECT PAGE STYLE */
-/* MIDDLE CONTENT */
-.project-container {
-    /* These margins push the content inward so it's not hidden by sidebars */
-    margin-left: 300px;  
-    margin-right: 300px;
-    height: 100vh;
-    
-    /* This aligns the text to the top-left */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Aligns to top */
-    padding: 10px; /* Matches the top padding of sidebar-left roughly */
-}
-
-/* Heading Styling */
-.project-container h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: var(--text-main);
-    text-align: left; /* Aligns text to left (near search bar) */
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: whitesmoke 1px 1px 2px;
+    /* Nav links */
+    .sidebar-right nav a {
+        font-size: 14px;
+    }
 }
