@@ -1,4 +1,6 @@
+/* ========================= */
 /* 1. COLOR VARIABLES */
+/* ========================= */
 :root {
     --bg-body: #121212;
     --bg-sidebar: #1f1f1f;
@@ -8,7 +10,9 @@
     --border-color: #333333;
 }
 
+/* ========================= */
 /* 2. GLOBAL */
+/* ========================= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -21,7 +25,9 @@ img {
     height: auto;
 }
 
-/* SIDEBARS */
+/* ========================= */
+/* 3. SIDEBARS (DESKTOP) */
+/* ========================= */
 .sidebar-left {
     position: fixed;
     left: 0;
@@ -30,6 +36,7 @@ img {
     height: 100vh;
     background-color: var(--bg-sidebar);
     border-right: 1px solid var(--border-color);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,17 +51,21 @@ img {
     height: 100vh;
     background-color: var(--bg-sidebar);
     border-left: 1px solid var(--border-color);
+
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
 }
 
-/* MAIN CONTENT */
+/* ========================= */
+/* 4. MAIN CONTENT */
+/* ========================= */
 .main-content {
     margin-left: 250px;
     margin-right: 250px;
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -67,7 +78,9 @@ img {
     text-shadow: whitesmoke 1px 1px 2px;
 }
 
-/* SEARCH */
+/* ========================= */
+/* 5. SEARCH */
+/* ========================= */
 .sidebar-left input {
     padding: 12px 20px;
     border-radius: 25px;
@@ -82,7 +95,9 @@ img {
     margin-top: 20px;
 }
 
-/* PROFILE IMAGE */
+/* ========================= */
+/* 6. PROFILE IMAGE */
+/* ========================= */
 .sidebar-right img {
     width: 120px;
     height: 120px;
@@ -90,7 +105,9 @@ img {
     object-fit: cover;
 }
 
-/* NAV */
+/* ========================= */
+/* 7. NAVIGATION */
+/* ========================= */
 .sidebar-right nav h2 {
     color: var(--accent);
     margin-bottom: 15px;
@@ -101,13 +118,16 @@ img {
     text-decoration: none;
     margin: 10px 0;
     display: block;
+    transition: 0.3s;
 }
 
 .sidebar-right nav a:hover {
     color: var(--accent);
 }
 
-/* ABOUT + PROJECT */
+/* ========================= */
+/* 8. ABOUT + PROJECT */
+/* ========================= */
 .container,
 .project-container {
     margin-left: 250px;
@@ -121,9 +141,8 @@ img {
 }
 
 /* ========================= */
-/* MOBILE NAV */
+/* 9. MOBILE NAVBAR */
 /* ========================= */
-
 .mobile-nav {
     display: none;
     justify-content: space-between;
@@ -139,6 +158,7 @@ img {
 
 .logo {
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .menu-toggle {
@@ -146,64 +166,113 @@ img {
     cursor: pointer;
 }
 
-/* MOBILE MENU */
+/* ========================= */
+/* 10. PREMIUM MOBILE SIDEBAR */
+/* ========================= */
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 250px;
+    left: -280px;
+    width: 260px;
     height: 100vh;
-    background-color: var(--bg-sidebar);
+    background: #181818;
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
-    transition: 0.3s;
+    padding: 20px;
+    transition: 0.3s ease;
     z-index: 1000;
 }
 
-.mobile-menu a {
-    padding: 15px;
-    color: var(--text-main);
-    text-decoration: none;
-}
-
+/* OPEN MENU */
 .mobile-menu.active {
     left: 0;
 }
 
-/* PROFILE IN NAV */
-.mobile-profile-img {
-    width: 35px;
-    height: 35px;
+/* PROFILE SECTION */
+.menu-profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-profile img {
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
+    border: 2px solid #444;
+    margin-bottom: 10px;
+}
+
+.menu-profile h2 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.menu-profile p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* MENU LINKS */
+.mobile-menu a {
+    padding: 12px 15px;
+    margin: 6px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+    background: #2a2a2a;
+}
+
+/* BACKDROP */
+.mobile-menu::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 260px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.mobile-menu.active::after {
+    display: block;
 }
 
 /* ========================= */
-/* RESPONSIVE */
+/* 11. RESPONSIVE */
 /* ========================= */
-
 @media screen and (max-width: 900px) {
 
     .mobile-nav {
         display: flex;
     }
 
-    /* Hide sidebars */
+    /* Hide desktop sidebars */
     .sidebar-left,
     .sidebar-right {
         display: none;
     }
 
-    /* Fix content */
+    /* Adjust content */
     .main-content,
     .container,
     .project-container {
         margin: 0;
-        padding: 80px 20px 20px; /* space for navbar */
+        padding: 80px 20px 20px;
     }
 
-    .main-content h1 {
+    .main-content h1,
+    .container h1,
+    .project-container h1 {
         text-align: center;
         font-size: 1.5rem;
+    }
+
+    .sidebar-left input {
+        width: 80%;
     }
 }
