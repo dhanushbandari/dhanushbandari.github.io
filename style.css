@@ -49,7 +49,7 @@ img {
 /* Profile Image inside Sidebar */
 .sidebar img.profile-pic {
     width: 180px;
-    height: 180px;
+    height: 200px;
     border-radius: 50%; /* Makes it a circle */
     object-fit: cover;
     margin-bottom: 15px;
