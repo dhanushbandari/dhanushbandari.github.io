@@ -49,11 +49,18 @@ img {
 /* Profile Image inside Sidebar */
 .sidebar img.profile-pic {
     width: 180px;
-    height: 200px;
+    height: 180px;
     border-radius: 50%; /* Makes it a circle */
     object-fit: cover;
     margin-bottom: 15px;
     border: 2px solid var(--text-muted);
+}
+
+.sidebar img.profile-pic:hover {
+    transform: scale(1.05);
+    border-color: var(--accent);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 }
 
 .sidebar h2.name {
@@ -166,11 +173,15 @@ img {
 }
 
 .menu-profile img {
-    width: 90px;
-    height: 90px;
+    width: 180px;
+    height: 200px;
     border-radius: 50%;
     border: 2px solid #444;
     margin-bottom: 10px;
+}
+.menu-profile img:hover {
+    transform: scale(1.08); /* Zooms in slightly */
+    border-color: var(--accent);
 }
 
 /* MENU LINKS */
