@@ -48,8 +48,8 @@ img {
 
 /* Profile Image inside Sidebar */
 .sidebar img.profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%; /* Makes it a circle */
     object-fit: cover;
     margin-bottom: 15px;
@@ -166,9 +166,9 @@ img {
 }
 
 .menu-profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 80%;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
     border: 2px solid #444;
     margin-bottom: 10px;
 }
