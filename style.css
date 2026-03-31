@@ -33,7 +33,7 @@ img {
 /* ========================= */
 .sidebar {
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
     width: 260px; /* Slightly wider to match reference */
     height: 100vh;
@@ -98,16 +98,72 @@ img {
 }
 
 /* ========================= */
+/* NEW: RIGHT SIDEBAR (Recent Updates) */
+/* ========================= */
+.recent-sidebar {
+    position: fixed;
+    left: 0; /* Anchors to the left side */
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    background-color: var(--bg-sidebar);
+    border-left: 1px solid var(--border-color);
+    padding: 40px 20px 20px 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Adds scrollbar if there are too many items */
+}
+
+.recent-sidebar h3 {
+    margin-top: 0;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Individual Recent Item Styles */
+.recent-item {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.recent-item:hover {
+    padding-left: 5px; /* Cool nudge effect on hover */
+    border-color: var(--text-muted);
+}
+
+.recent-item h4 { 
+    margin: 0 0 5px 0; 
+    font-size: 1rem; 
+    color: var(--text-main); 
+}
+
+.recent-item p { 
+    margin: 0; 
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+}
+
+
+/* ========================= */
 /* 4. MAIN CONTENT */
 /* ========================= */
 .main-content {
     margin-left: 260px; /* Pushes content right of the sidebar */
-    margin-right: 0;    /* Removed the right margin */
+    margin-right: 260px;    /* Removed the right margin */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 40px;
     box-sizing: border-box;
+}
+
+/* NEW: Specific rule to squeeze content ONLY on the Home Page */
+body.home-layout .main-content {
+    margin-left: 260px !important; /* Pushes content away from left sidebar */
+    margin-right: 260px !important; /* Pushes content away from right sidebar */
 }
 
 .main-content h1 {
@@ -223,13 +279,14 @@ img {
     }
 
     /* Hide desktop sidebar */
-    .sidebar {
+    .sidebar, .recent-sidebar {
         display: none;
     }
 
     /* Adjust main content to take full width */
-    .main-content {
-        margin-left: 0;
+    .main-content , body.home-layout .main-content {
+        margin-left: 0 !important; /* Remove left margin */
+        margin-right: 0 !important; /* Remove right margin */
         padding: 80px 20px 20px 20px; /* Top padding to clear the mobile nav */
     }
 }
