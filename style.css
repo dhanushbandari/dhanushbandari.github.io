@@ -166,9 +166,9 @@ img {
 }
 
 .menu-profile img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 80%;
     border: 2px solid #444;
     margin-bottom: 10px;
 }
