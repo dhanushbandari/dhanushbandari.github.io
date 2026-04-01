@@ -33,7 +33,7 @@ img {
 /* ========================= */
 .sidebar {
     position: fixed;
-    right: 0;
+    right: 0; /* Anchors to the right side */
     top: 0;
     width: 260px; /* Slightly wider to match reference */
     height: 100vh;
@@ -94,7 +94,7 @@ img {
 
 .sidebar nav a:hover, .sidebar nav a.active {
     color: var(--bg-body);
-    background-color: var(--accent); /* Highlights the active/hovered link */
+    background-color: var(--text-muted); /* Highlights the active/hovered link */
 }
 
 /* ========================= */
@@ -153,10 +153,10 @@ img {
 .main-content {
     margin-left: 260px; /* Pushes content right of the sidebar */
     margin-right: 260px;    /* Removed the right margin */
-    min-height: 100vh;
+    min-height: 150vh;
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
