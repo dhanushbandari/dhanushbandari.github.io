@@ -1,13 +1,8 @@
 ---
 title: NEW BEGINNING
 date: 2026-04-23 12:56:05 +0530
-timezone: Asia/Kolkata
 categories: [My Journey, sub-category]
-tags: [tag1, tag2, tag3]
-description: My Story 
-image:
-  path: /assets/img/cover.png
-  alt: Image size should be 1200 x 630 or 1.91 : 1
+tags: []
 pin: false
 math: true
 mermaid: true
