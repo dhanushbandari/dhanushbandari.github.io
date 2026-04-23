@@ -15,6 +15,9 @@ Late at night, while I was scrolling through YouTube, I came across a video of C
 
 "WAKE UP AND SMELL THE COFFEE"
 
+## Video 
+{% include embed/youtube.html id='G_NSHnRKn0c'%}
+
 I knew the meaning of the idiom, but this time it felt different. It felt personal. That one line hit me out of nowhere. I paused for a moment and asked myself. What have I been doing all these days.? Why am I not using the things I learn.?
 
 My mind was full of confusion, like I was riding a drunk horse running a race without knowing the finish line until the rider make the horse stop. Thoughts were everywhere and it started making me restless. That's when i realized i needed to stop not evrything just overthinking.
