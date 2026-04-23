@@ -17,3 +17,4 @@ I love to know how the hardware and software interact with each other. I’m alw
 I’m documenting this to express how I learn and apply things, and to tell myself that you did well when times and things are hard.
 
 Well, I hope you got to know so much about me. I prefer to describe myself by doing things instead of talking or typing words. I think it’s not meant to talk in this way because I prefer action over talk. Well, if you’re a geek who loves learning new things and exploring yourself in something new, you’re welcome to sneak in.
+
