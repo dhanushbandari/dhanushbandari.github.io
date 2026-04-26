@@ -20,7 +20,7 @@ Late at night, while I was scrolling through YouTube, I came across a video of C
 
 I knew the meaning of the idiom, but this time it felt different. It felt personal. That one line hit me out of nowhere. I paused for a moment and asked myself. What have I been doing all these days.? Why am I not using the things I learn.?
 
-My mind was full of confusion, like I was riding a drunk horse running a race without knowing the finish line until the rider make the horse stop. Thoughts were everywhere and it started making me restless. That's when i realized i needed to stop not evrything just overthinking.
+My mind was full of confusion, like I was riding a drunk horse running a race without knowing the finish line until the rider make the horse stop. Thoughts were everywhere and it started making me restless. That's when i realized i needed to stop not everything just overthinking.
 
 so i decided to take control and start doing something on my own.At that moment, i remembered a friend of mine runs online blog. i reached out,we discussed a few ideas,and something clicked. That's enough.
 
