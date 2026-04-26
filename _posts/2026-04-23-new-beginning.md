@@ -11,16 +11,20 @@ comments: true
 
 # My Journey
 
-Late at night, while I was scrolling through YouTube, I came across a video of Cobra Kai where they said an idiom:
+Late at night, while I was scrolling through YouTube, I came across a video of Cobra Kai where they said
 
-"WAKE UP AND SMELL THE COFFEE"
+>WAKE UP AND SMELL THE COFFEE
+{: .prompt-tip }
 
 ## Source
 {% include embed/youtube.html id='G_NSHnRKn0c'%}
 
+
 I knew the meaning of the idiom, but this time it felt different. It felt personal. That one line hit me out of nowhere. I paused for a moment and asked myself. What have I been doing all these days.? Why am I not using the things I learn.?
 
-My mind was full of confusion, like I was riding a drunk horse running a race without knowing the finish line until the rider make the horse stop. Thoughts were everywhere and it started making me restless. That's when i realized i needed to stop not everything just overthinking.
+My mind was full of confusion, like I was riding a drunk horse running a race without knowing the finish line until the rider make the horse stop. Thoughts were everywhere and it started making me restless. That's when i realized i needed to stop 
+>not everything  just  overthinking.
+{: .prompt-danger}
 
 so i decided to take control and start doing something on my own.At that moment, i remembered a friend of mine runs online blog. i reached out,we discussed a few ideas,and something clicked. That's enough.
 
@@ -28,7 +32,8 @@ Now, here I'm typing my very first blog.i don't have to figure out everything.Bu
 
 if you've ever felt stuck like me,maybe this your sign too.
 
-So buckle up and stay with me for long run..
+>So buckle up and stay with me for long run..
+{: .prompt-warning}
 
 ## Thank You
 ![Jerry saying thanks](/assets/img/jerry-thanks.gif)
