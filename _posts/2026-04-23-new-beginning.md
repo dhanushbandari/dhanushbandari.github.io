@@ -2,7 +2,7 @@
 title: NEW BEGINNING
 date: 2026-04-23 12:56:05 +0530
 categories: [My Journey, Source]
-tags: [my journey,source,thank you]
+tags: [My journey,Narrative]
 pin: false
 math: true
 mermaid: true
