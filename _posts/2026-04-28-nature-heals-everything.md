@@ -46,6 +46,6 @@ For me, nature heals when I’m out there, walking for hours, covering kilometer
  >Book Tickets in advance If you ever wish to vist
  {: .prompt-warning}
 
-[(Detail Of the Location )]((https://karnatakatourism.org/en/experiences/bandaje-falls-experience/)) -Karnataka Tourism 
-[(To Book the Tickets)]((https://aranyavihaara.karnataka.gov.in/)) -AranyVihaara 
+[(Detail Of the Location )](https://karnatakatourism.org/en/experiences/bandaje-falls-experience/) -Karnataka Tourism 
+[(To Book the Tickets)](https://aranyavihaara.karnataka.gov.in/) -AranyVihaara 
 
