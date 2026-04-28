@@ -33,7 +33,7 @@ For me, nature heals when I’m out there, walking for hours, covering kilometer
 
 ## A Day of Trekking
 
- Sample Video of my journey 
+ A Small Clip of My journey 
  {% include embed/youtube.html id='IcjRVXbos5o'%}
 
  >Video Shot was not good 
