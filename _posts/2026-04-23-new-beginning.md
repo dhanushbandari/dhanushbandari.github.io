@@ -6,6 +6,7 @@ tags: [My journey,Narrative]
 pin: false
 math: true
 mermaid: true
+description: My First New Blog 
 comments: true
 ---
 
@@ -36,4 +37,4 @@ if you've ever felt stuck like me,maybe this your sign too.
 {: .prompt-warning}
 
 ## Thank You
-![Jerry saying thanks](/assets/img/jerry-thanks.gif)
+![Jerry saying thanks](/assets/img/gif/jerry-thanks.gif)
