@@ -18,7 +18,7 @@ Late at night, while I was scrolling through YouTube, I came across a video of C
 {: .prompt-tip }
 
 ## Source
-{% include embed/youtube.html id='G_NSHnRKn0c'%}
+{% include embed/youtube.html id='G_NSHnRKn0c'%} IcjRVXbos5o
 
 
 I knew the meaning of the idiom, but this time it felt different. It felt personal. That one line hit me out of nowhere. I paused for a moment and asked myself. What have I been doing all these days.? Why am I not using the things I learn.?
